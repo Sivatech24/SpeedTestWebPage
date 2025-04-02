@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Test</title>
+    <link rel="icon" type="image/x-icon" href="/static/speed.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Internet Speed Test</h1>
+        <button onclick="runSpeedTest()">Start Test</button>
+
+        <!-- 🚀 Loading Section -->
+        <div id="loading-section" class="loading-container">
+            <p>Testing Speed... Please Wait</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-bar"></div>
+            </div>
+        </div>
+
+        <!-- ✅ Speed Test Results -->
+        <div id="result-section" class="hidden">
+            <div class="chart-container">
+                <canvas id="speedChart"></canvas>
+            </div>
+
+            <div class="details">
+                <h2>Download Speed</h2>
+                <p id="download-speed"></p>
+
+                <h2>Upload Speed</h2>
+                <p id="upload-speed"></p>
+
+                <h2>Other Details</h2>
+                <p><b>Ping:</b> <span id="ping">-</span> ms</p>
+                <p><b>Local IP:</b> <span id="ip-address">-</span></p>
+                <p><b>Data Sent:</b> <span id="data-sent">-</span> Bytes</p>
+                <p><b>Data Received:</b> <span id="data-received">-</span> Bytes</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- 🌍 Footer -->
+    <footer>
+        <p>&copy; 2025 Speed Test App | <a href="/about">About</a></p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

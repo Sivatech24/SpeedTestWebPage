@@ -1,0 +1,85 @@
+/* 📟 Retro 1980s Green Terminal UI */
+body {
+    background-color: black;
+    color: #00FF00;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #003300;
+    padding: 15px;
+}
+
+h1 {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+nav a {
+    color: #00FF00;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin: 20px;
+    font-size: 20px;
+}
+
+pre {
+    font-size: 16px;
+    font-weight: bold;
+    color: #00FF00;
+    white-space: pre-wrap;
+    margin: 20px auto;
+}
+
+.download-btn {
+    display: block;
+    background-color: #003300;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+    padding: 10px;
+    margin: 10px auto;
+    width: 200px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.download-btn:hover {
+    background-color: #005500;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background-color: #003300;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+body {
+    animation: flicker 0.15s infinite alternate;
+    text-shadow: 0px 0px 5px #00FF00;
+}
+
